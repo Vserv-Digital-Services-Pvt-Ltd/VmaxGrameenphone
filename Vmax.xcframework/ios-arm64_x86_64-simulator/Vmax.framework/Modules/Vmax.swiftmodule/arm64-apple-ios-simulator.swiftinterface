@@ -32,6 +32,11 @@ public class VmaxAdAssetHelperFactory {
   public func get(type: Vmax.VmaxAdAssetType) -> (any Vmax.VmaxAdAssetHelper)?
   @objc deinit
 }
+@_inheritsConvenienceInitializers public class VmaxClassBasedAdLayout : Vmax.VmaxAdLayout {
+  override public init(adLayoutRegistrationType: Vmax.VmaxAdLayoutRegistrationType)
+  override public func addAdLayout<T>(experience: T, adLayout: any Vmax.VmaxLayout)
+  @objc deinit
+}
 public enum ExpandCollapse : Swift.Int {
   case expand
   case collapse
@@ -43,6 +48,10 @@ public enum ExpandCollapse : Swift.Int {
 }
 public protocol VmaxInstreamAd : AnyObject {
   func update(container view: UIKit.UIView)
+  func getPictureInPictureDelegate() -> (any Vmax.VmaxPictureInPictureDelegate)?
+}
+extension Vmax.VmaxInstreamAd {
+  public func getPictureInPictureDelegate() -> (any Vmax.VmaxPictureInPictureDelegate)?
 }
 public enum FamilyParenting : Swift.Int {
   case adoption
@@ -70,6 +79,30 @@ extension Vmax.FamilyParenting : Swift.CaseIterable {
   final public let stringValue: Swift.String
   public init(val: Vmax.FamilyParenting)
   @objc deinit
+}
+public protocol VmaxCarouselAd : AnyObject {
+  func isCardActive() -> Swift.Bool
+  func swipeMode() -> Vmax.VmaxCarouselSwipeMode
+  func isAdLoaded() -> Swift.Bool
+  func getAdWidth() -> Swift.Int
+  func getAdHeight() -> Swift.Int
+  func setAdCompletionListener(adCompletionListener: any Vmax.VmaxCarouselAdCompletionListener)
+  func setAdFocus()
+  func setAdOutOfFocus()
+  func setAdIsDisplayedInCarousel(flag: Swift.Bool)
+  func onAdLoaded()
+}
+public protocol VmaxCarouselAdCompletionListener : AnyObject {
+  func onAdCompleted()
+}
+public enum VmaxCarouselSwipeMode {
+  case adComplete
+  case adCompleteUnknown
+  public static func == (a: Vmax.VmaxCarouselSwipeMode, b: Vmax.VmaxCarouselSwipeMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 public enum Sports : Swift.Int {
   case autoRacing
@@ -338,7 +371,12 @@ extension Vmax.HomeGarden : Swift.CaseIterable {
   public func addVmaxAds(vmaxAds: [any Vmax.VmaxAd.Type])
   public func addCustomSignatureForVmaxAd(signature: Swift.String, vmaxAd: any Vmax.VmaxAd.Type)
   public func registerViewability(viewability: any Vmax.VmaxAdViewability.Type)
+  public func registerPictureInPictureController(pictureInPictureController: Vmax.VmaxPictureInPictureController)
+  public func unregisterPictureInPictureController()
   public func getViewabilityVersion() -> Swift.String?
+  public func getVmaxAdLayout(adLayoutRegistrationType: Vmax.VmaxAdLayoutRegistrationType) -> Vmax.VmaxAdLayout
+  public func getAllSignatures() -> [Swift.String]
+  public func getVmaxAd(format: Swift.String) -> (any Vmax.VmaxAd)?
   @objc deinit
 }
 public enum TechnologyComputing : Swift.Int {
@@ -447,6 +485,11 @@ public enum PauseResume : Swift.Int {
     get
   }
 }
+@_inheritsConvenienceInitializers public class VmaxExperienceBasedAdLayout : Vmax.VmaxAdLayout {
+  override public init(adLayoutRegistrationType: Vmax.VmaxAdLayoutRegistrationType)
+  override public func addAdLayout<T>(experience: T, adLayout: any Vmax.VmaxLayout)
+  @objc deinit
+}
 public enum Travel : Swift.Int {
   case adventureTravel
   case africa
@@ -552,6 +595,11 @@ extension Vmax.AdClickBrowser : Swift.CaseIterable {
     get
   }
 }
+public class VmaxAdLayout {
+  public init(adLayoutRegistrationType: Vmax.VmaxAdLayoutRegistrationType)
+  public func addAdLayout<T>(experience: T, adLayout: any Vmax.VmaxLayout)
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers public class VmaxManager {
   public var isAppMuted: Swift.Bool
   public static var shared: Vmax.VmaxManager
@@ -593,6 +641,19 @@ extension Vmax.IllegalContent : Swift.CaseIterable {
   final public let stringValue: Swift.String
   public init(val: Vmax.IllegalContent)
   @objc deinit
+}
+public enum VmaxAdLayoutRegistrationType : Swift.CaseIterable {
+  case classBased
+  case experienceBased
+  public static func == (a: Vmax.VmaxAdLayoutRegistrationType, b: Vmax.VmaxAdLayoutRegistrationType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias AllCases = [Vmax.VmaxAdLayoutRegistrationType]
+  nonisolated public static var allCases: [Vmax.VmaxAdLayoutRegistrationType] {
+    get
+  }
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 open class VmaxError : Swift.Error {
   final public let code: Swift.Int
@@ -833,6 +894,10 @@ public struct VmaxAdsInsertionModel {
   public var recurrence: Vmax.AdRecurrence?
   public var minBreakDuration: Swift.Int?
   public var maxBreakDuration: Swift.Int?
+  public var autoloadAfter: Swift.Int
+  public var loadOnPreloadSignal: Swift.Bool
+  public var allowReloadForNofill: Swift.Bool
+  public var maxDeficitRetries: Swift.Int
   public var adsInsertionDelegate: (any Vmax.VmaxAdsInsertionDelegate)?
 }
 public enum AdRecurrence {
@@ -948,6 +1013,29 @@ public enum MuteUnmute : Swift.Int {
   public var rawValue: Swift.Int {
     get
   }
+}
+public protocol VmaxPictureInPictureDelegate : AnyObject {
+  func startPip(avPictureInPictureController: AVKit.AVPictureInPictureController)
+  func stopPip()
+}
+final public class VmaxPictureInPictureController {
+  public init(avPictureInPictureController: AVKit.AVPictureInPictureController)
+  final public func startPip()
+  final public func stopPip()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VmaxPictureInPictureRegistry : ObjectiveC.NSObject {
+  public static var shared: Vmax.VmaxPictureInPictureRegistry
+  public func register(instreamAd: any Vmax.VmaxInstreamAd)
+  public func unregister(instreamAd: any Vmax.VmaxInstreamAd)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class VmaxPictureInPictureManager {
+  public static var shared: Vmax.VmaxPictureInPictureManager
+  public var isPipEnabled: Swift.Bool {
+    get
+  }
+  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class VmaxAdView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
@@ -1097,9 +1185,13 @@ public protocol VmaxAdEventDelegate : AnyObject {
   func onAdReady(vmaxAdSpace: Vmax.VmaxAdSpace)
   func onAdError(vmaxAdSpace: Vmax.VmaxAdSpace, vmaxError: Vmax.VmaxError)
   func onAdRender(vmaxAdSpace: Vmax.VmaxAdSpace)
+  func onAdImpression(vmaxAdSpace: Vmax.VmaxAdSpace)
   func onAdRefresh(vmaxAdSpace: Vmax.VmaxAdSpace)
   func onAdClick(vmaxAdSpace: Vmax.VmaxAdSpace)
   func onAdClose(vmaxAdSpace: Vmax.VmaxAdSpace)
+}
+extension Vmax.VmaxAdEventDelegate {
+  public func onAdImpression(vmaxAdSpace: Vmax.VmaxAdSpace)
 }
 public enum Education : Swift.Int {
   case education7to12
@@ -1161,6 +1253,10 @@ extension Vmax.VmaxDevice {
   public func setMinBreakDuration(_ duration: Swift.Int) -> Vmax.VmaxAdsInsertionRequestBuilder
   @discardableResult
   public func setMaxBreakDuration(_ duration: Swift.Int) -> Vmax.VmaxAdsInsertionRequestBuilder
+  @discardableResult
+  public func setAutoLoadAfter(_ autoloadAfter: Swift.Int) -> Vmax.VmaxAdsInsertionRequestBuilder
+  @discardableResult
+  public func setMaxDeficitRetries(_ maxDeficitRetries: Swift.Int) -> Vmax.VmaxAdsInsertionRequestBuilder
   override public func build() -> Vmax.VmaxAdsInsertionRequest
   @objc deinit
 }
@@ -1275,13 +1371,18 @@ extension Vmax.StyleFashion : Swift.CaseIterable {
   public init(val: Vmax.StyleFashion)
   @objc deinit
 }
-public enum VmaxClientError : Swift.Error {
-  case badURL
-  case unknownError(error: Swift.String)
-  case errorHttpResponse
-  case notFound
-  case unknownResponseCode(code: Swift.Int)
-  case invalidData
+final public class VmaxClientError : Swift.Error {
+  final public let errorDescription: Swift.String
+  public enum Codes {
+    case badURL
+    case unknownError(error: Swift.String)
+    case errorHttpResponse
+    case notFound
+    case unknownResponseCode(code: Swift.Int)
+    case invalidData
+  }
+  public init(code: Vmax.VmaxClientError.Codes)
+  @objc deinit
 }
 public enum Society : Swift.Int {
   case dating
@@ -1443,6 +1544,7 @@ extension Vmax.ArtsEntertainment : Swift.CaseIterable {
 }
 @_hasMissingDesignatedInitializers public class VmaxAdSpace {
   @objc deinit
+  public var disableDampening: Swift.Bool
 }
 extension Vmax.VmaxAdSpace {
   public func setRequestedAdOrientation(orientation: Vmax.Orientation)
@@ -1451,7 +1553,7 @@ extension Vmax.VmaxAdSpace {
   public func addAdEventDelegate(adEventDelegate: any Vmax.VmaxAdEventDelegate)
   public func addMediaEvents(mediaEvents: any Vmax.VmaxMediaEvents)
   public func setCompanionEvents(companionEvents: any Vmax.VmaxCompanionEvents)
-  public func setLayout(layout: any Vmax.VmaxLayout)
+  public func setVmaxAdLayout(vmaxAdLayout: Vmax.VmaxAdLayout)
   public func showAd(container: UIKit.UIView)
   public func getTagId() -> Swift.String
   public func setRefreshInterval(time: Swift.Int)
@@ -1462,9 +1564,10 @@ extension Vmax.VmaxAdSpace {
   public func getVmaxAd() -> (any Vmax.VmaxAd)?
   public func getId() -> Swift.String
   public func getState() -> Vmax.VmaxAdSpaceState
+  public func getAdLayout() -> (any Vmax.VmaxLayout)?
   public func setCacheMode(cacheMode: Vmax.VmaxCacheMode)
   public func setMediaLoadTimeout(timeoutInSeconds: Swift.Int)
-  public func getAdLayout() -> (any Vmax.VmaxLayout)?
+  public func addCustomData(customData: [Swift.String : Swift.String])
   public func isVmaxAdSpaceRefreshable() -> Swift.Bool
 }
 extension Vmax.VmaxAdSpace : Vmax.VmaxAdDelegate {
@@ -1700,10 +1803,12 @@ public class VmaxTracker {
   public init()
   public func addEvent(event: Vmax.VmaxEvent)
   public func fireNotification(eventName: Swift.String)
+  public func fireNotification(eventName: Swift.String, completionHandler: @escaping (Swift.Result<Foundation.Data, Vmax.VmaxClientError>) -> Swift.Void)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VmaxRequest : ObjectiveC.NSObject {
   public func setDistinctAdConfiguration(distinctValue: Swift.String)
+  public func setSignatures(signatures: [Swift.String])
   @objc deinit
 }
 public enum HobbiesInterests : Swift.Int {
@@ -1833,6 +1938,8 @@ extension Vmax.ExpandCollapse : Swift.RawRepresentable {}
 extension Vmax.FamilyParenting : Swift.Equatable {}
 extension Vmax.FamilyParenting : Swift.Hashable {}
 extension Vmax.FamilyParenting : Swift.RawRepresentable {}
+extension Vmax.VmaxCarouselSwipeMode : Swift.Equatable {}
+extension Vmax.VmaxCarouselSwipeMode : Swift.Hashable {}
 extension Vmax.Sports : Swift.Equatable {}
 extension Vmax.Sports : Swift.Hashable {}
 extension Vmax.Sports : Swift.RawRepresentable {}
@@ -1874,6 +1981,8 @@ extension Vmax.AdClickBrowser : Swift.RawRepresentable {}
 extension Vmax.IllegalContent : Swift.Equatable {}
 extension Vmax.IllegalContent : Swift.Hashable {}
 extension Vmax.IllegalContent : Swift.RawRepresentable {}
+extension Vmax.VmaxAdLayoutRegistrationType : Swift.Equatable {}
+extension Vmax.VmaxAdLayoutRegistrationType : Swift.Hashable {}
 extension Vmax.VmaxLogType : Swift.Equatable {}
 extension Vmax.VmaxLogType : Swift.Hashable {}
 extension Vmax.VmaxLogType : Swift.RawRepresentable {}

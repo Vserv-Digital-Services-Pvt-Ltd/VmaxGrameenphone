@@ -550,6 +550,14 @@ SWIFT_CLASS("_TtC4Vmax15VmaxPagesTravel")
 @end
 
 
+/// VmaxPictureInPictureRegistry is used to register VmaxInstreamAd class for PIP.
+SWIFT_CLASS("_TtC4Vmax28VmaxPictureInPictureRegistry")
+@interface VmaxPictureInPictureRegistry : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 /// VmaxRegistry class holds the responsibility to register VmaxAd & VmaxAdViewability classes.
 SWIFT_CLASS("_TtC4Vmax12VmaxRegistry")
 @interface VmaxRegistry : NSObject
@@ -1123,6 +1131,14 @@ SWIFT_CLASS("_TtC4Vmax28VmaxPagesTechnologyComputing")
 
 SWIFT_CLASS("_TtC4Vmax15VmaxPagesTravel")
 @interface VmaxPagesTravel : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// VmaxPictureInPictureRegistry is used to register VmaxInstreamAd class for PIP.
+SWIFT_CLASS("_TtC4Vmax28VmaxPictureInPictureRegistry")
+@interface VmaxPictureInPictureRegistry : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
