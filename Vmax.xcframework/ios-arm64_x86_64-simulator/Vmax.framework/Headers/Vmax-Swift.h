@@ -520,6 +520,11 @@ SWIFT_CLASS("_TtC4Vmax12VmaxRegistry")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+SWIFT_CLASS("_TtC4Vmax16VmaxSourceConfig")
+@interface VmaxSourceConfig : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 /// VmaxTimer allows you to create custom Timer object.
 SWIFT_CLASS("_TtC4Vmax9VmaxTimer")
 @interface VmaxTimer : NSObject
@@ -1055,6 +1060,11 @@ SWIFT_CLASS("_TtC4Vmax12VmaxRegistry")
 @interface VmaxRegistry : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC4Vmax16VmaxSourceConfig")
+@interface VmaxSourceConfig : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 /// VmaxTimer allows you to create custom Timer object.

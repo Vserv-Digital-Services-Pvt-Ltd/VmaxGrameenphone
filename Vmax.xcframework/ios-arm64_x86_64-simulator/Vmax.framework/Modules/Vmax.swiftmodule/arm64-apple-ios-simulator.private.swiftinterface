@@ -20,7 +20,7 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 public enum VmaxAdAssetType {
-  case instreamVideo, outstreamVideo, display, imamediation
+  case instreamVideo, outstreamVideo, vvpInstream, vvpOutstream, display, imamediation
   public static func == (a: Vmax.VmaxAdAssetType, b: Vmax.VmaxAdAssetType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -279,6 +279,21 @@ public enum ConnectionType : Swift.Int {
 extension Vmax.ConnectionType : Swift.CaseIterable {
   public typealias AllCases = [Vmax.ConnectionType]
   nonisolated public static var allCases: [Vmax.ConnectionType] {
+    get
+  }
+}
+public class VmaxRemoteAdsConfig {
+  public init(type: Vmax.VmaxRemoteConfigType, options: Swift.Int = 0)
+  public static func defaultSetup() -> Vmax.VmaxRemoteAdsConfig
+  @objc deinit
+}
+public enum VmaxRemoteConfigType {
+  case max
+  case count
+  case initial
+  public static func == (a: Vmax.VmaxRemoteConfigType, b: Vmax.VmaxRemoteConfigType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
     get
   }
 }
@@ -604,6 +619,7 @@ public class VmaxAdLayout {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class VmaxManager {
+  public var remoteAdsConfig: Vmax.VmaxRemoteAdsConfig?
   public var isAppMuted: Swift.Bool
   public static var shared: Vmax.VmaxManager
   @objc deinit
@@ -621,6 +637,7 @@ extension Vmax.VmaxManager {
   public func getVmaxRegistry() -> Vmax.VmaxRegistry
   public func getVersion() -> Swift.String
   public func getAdvertisingId() -> Swift.String?
+  public func getSourceConfigService() -> Vmax.VmaxSourceConfig
   public func getSourceConfiguration() -> [Swift.String : Any]?
 }
 public enum IllegalContent : Swift.Int {
@@ -1016,6 +1033,14 @@ public enum MuteUnmute : Swift.Int {
   public var rawValue: Swift.Int {
     get
   }
+}
+@objc @_inheritsConvenienceInitializers public class VmaxSourceConfig : ObjectiveC.NSObject {
+  public func setSourceConfigUpdate(delegate: (any Vmax.VmaxSourceConfigUpdateDelegate)?)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol VmaxSourceConfigUpdateDelegate : AnyObject {
+  func onUpdate()
 }
 public protocol VmaxPictureInPictureDelegate : AnyObject {
   func startPip(avPictureInPictureController: AVKit.AVPictureInPictureController)
@@ -1501,6 +1526,7 @@ public protocol VmaxCompanionParams {
   public func build() -> Vmax.VmaxRequest
 }
 @objc public class VmaxHttpClient : ObjectiveC.NSObject {
+  public var responseHeaders: [Swift.String : Swift.String]?
   public init(vmaxHttpClientModel: Vmax.VmaxHttpClientModel)
   public func fetch(completionHandler: @escaping (Swift.Result<Foundation.Data, Vmax.VmaxClientError>) -> Swift.Void)
   @objc deinit
@@ -1981,6 +2007,8 @@ extension Vmax.VmaxViewabilityType : Swift.Hashable {}
 extension Vmax.ConnectionType : Swift.Equatable {}
 extension Vmax.ConnectionType : Swift.Hashable {}
 extension Vmax.ConnectionType : Swift.RawRepresentable {}
+extension Vmax.VmaxRemoteConfigType : Swift.Equatable {}
+extension Vmax.VmaxRemoteConfigType : Swift.Hashable {}
 extension Vmax.FoodDrink : Swift.Equatable {}
 extension Vmax.FoodDrink : Swift.Hashable {}
 extension Vmax.FoodDrink : Swift.RawRepresentable {}
