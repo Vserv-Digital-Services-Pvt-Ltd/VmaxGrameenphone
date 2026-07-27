@@ -38260,6 +38260,27 @@
         "printedName": "VmaxLayout",
         "children": [
           {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:4Vmax0A6LayoutPxycfc",
+            "mangledName": "$s4Vmax0A6LayoutPxycfc",
+            "moduleName": "Vmax",
+            "genericSig": "<τ_0_0 where τ_0_0 : Vmax.VmaxLayout>",
+            "sugared_genericSig": "<Self where Self : Vmax.VmaxLayout>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "init_kind": "Designated"
+          },
+          {
             "kind": "Function",
             "name": "getNibName",
             "printedName": "getNibName()",
@@ -46669,52 +46690,53 @@
             "moduleName": "Vmax"
           },
           {
-            "kind": "Function",
-            "name": "==",
-            "printedName": "==(_:_:)",
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
+                "name": "Optional",
+                "printedName": "Vmax.VmaxAdSpaceState?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VmaxAdSpaceState",
+                    "printedName": "Vmax.VmaxAdSpaceState",
+                    "usr": "s:4Vmax0A12AdSpaceStateO"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
-                "name": "VmaxAdSpaceState",
-                "printedName": "Vmax.VmaxAdSpaceState",
-                "usr": "s:4Vmax0A12AdSpaceStateO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "VmaxAdSpaceState",
-                "printedName": "Vmax.VmaxAdSpaceState",
-                "usr": "s:4Vmax0A12AdSpaceStateO"
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
-            "declKind": "Func",
-            "usr": "s:4Vmax0A12AdSpaceStateO2eeoiySbAC_ACtFZ",
-            "mangledName": "$s4Vmax0A12AdSpaceStateO2eeoiySbAC_ACtFZ",
+            "declKind": "Constructor",
+            "usr": "s:4Vmax0A12AdSpaceStateO8rawValueACSgSS_tcfc",
+            "mangledName": "$s4Vmax0A12AdSpaceStateO8rawValueACSgSS_tcfc",
             "moduleName": "Vmax",
-            "static": true,
             "implicit": true,
-            "funcSelfKind": "NonMutating"
+            "init_kind": "Designated"
           },
           {
             "kind": "Var",
-            "name": "hashValue",
-            "printedName": "hashValue",
+            "name": "rawValue",
+            "printedName": "rawValue",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Var",
-            "usr": "s:4Vmax0A12AdSpaceStateO9hashValueSivp",
-            "mangledName": "$s4Vmax0A12AdSpaceStateO9hashValueSivp",
+            "usr": "s:4Vmax0A12AdSpaceStateO8rawValueSSvp",
+            "mangledName": "$s4Vmax0A12AdSpaceStateO8rawValueSSvp",
             "moduleName": "Vmax",
             "implicit": true,
             "accessors": [
@@ -46725,44 +46747,19 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:4Vmax0A12AdSpaceStateO9hashValueSivg",
-                "mangledName": "$s4Vmax0A12AdSpaceStateO9hashValueSivg",
+                "usr": "s:4Vmax0A12AdSpaceStateO8rawValueSSvg",
+                "mangledName": "$s4Vmax0A12AdSpaceStateO8rawValueSSvg",
                 "moduleName": "Vmax",
                 "implicit": true,
                 "accessorKind": "get"
               }
             ]
-          },
-          {
-            "kind": "Function",
-            "name": "hash",
-            "printedName": "hash(into:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Hasher",
-                "printedName": "Swift.Hasher",
-                "paramValueOwnership": "InOut",
-                "usr": "s:s6HasherV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:4Vmax0A12AdSpaceStateO4hash4intoys6HasherVz_tF",
-            "mangledName": "$s4Vmax0A12AdSpaceStateO4hash4intoys6HasherVz_tF",
-            "moduleName": "Vmax",
-            "implicit": true,
-            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Enum",
@@ -46772,6 +46769,7 @@
         "declAttributes": [
           "AccessControl"
         ],
+        "enumRawTypeName": "String",
         "conformances": [
           {
             "kind": "Conformance",
@@ -46800,6 +46798,28 @@
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
           }
         ]
       },
@@ -54855,6 +54875,16 @@
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Vmax",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -65807,7 +65837,7 @@
       "kind": "StringLiteral",
       "offset": 483,
       "length": 13,
-      "value": "\"A-IO-4.0.42\""
+      "value": "\"A-IO-4.0.43\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/Core\/VmaxManager.swift",
@@ -67289,28 +67319,28 @@
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/Core\/VmaxApplication.swift",
       "kind": "BooleanLiteral",
-      "offset": 2032,
+      "offset": 2062,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/Core\/VmaxApplication.swift",
       "kind": "BooleanLiteral",
-      "offset": 2089,
+      "offset": 2119,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/Core\/VmaxApplication.swift",
       "kind": "BooleanLiteral",
-      "offset": 2166,
+      "offset": 2196,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/Core\/VmaxApplication.swift",
       "kind": "BooleanLiteral",
-      "offset": 2995,
+      "offset": 3025,
       "length": 5,
       "value": "false"
     },
@@ -67751,7 +67781,7 @@
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/Core\/VmaxAdSpace.swift",
       "kind": "BooleanLiteral",
-      "offset": 30746,
+      "offset": 30925,
       "length": 4,
       "value": "true"
     },
@@ -68118,6 +68148,13 @@
       "offset": 1331,
       "length": 7,
       "value": "\"IAB7-\""
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxClient\/VmaxCookieManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1970,
+      "length": 18,
+      "value": "\"fcap_cookies.dat\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Swagger\/Models\/RequestImpExtMeta.swift",
@@ -68885,126 +68922,168 @@
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 920,
+      "offset": 805,
+      "length": 6,
+      "value": "\"{os}\""
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
+      "kind": "StringLiteral",
+      "offset": 840,
+      "length": 14,
+      "value": "\"{sdkVersion}\""
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
+      "kind": "StringLiteral",
+      "offset": 883,
+      "length": 14,
+      "value": "\"{appVersion}\""
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
+      "kind": "StringLiteral",
+      "offset": 1039,
       "length": 7,
       "value": "\"1.0.0\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 953,
+      "offset": 1072,
       "length": 147,
       "value": "\"https:\/\/\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 987,
+      "offset": 1106,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1014,
+      "offset": 1133,
       "length": 1,
       "value": "\"\/source-config\/\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1055,
+      "offset": 1174,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1077,
+      "offset": 1196,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1099,
+      "offset": 1218,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1188,
+      "offset": 1307,
       "length": 24,
       "value": "\"{source-config-domain}\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1242,
+      "offset": 1361,
       "length": 25,
       "value": "\"{source-config-version}\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1339,
+      "offset": 1458,
       "length": 73,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1365,
+      "offset": 1484,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1392,
+      "offset": 1511,
       "length": 1,
       "value": "\"\/adspot\/1.0.2\/query\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1488,
+      "offset": 1607,
+      "length": 153,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
+      "kind": "StringLiteral",
+      "offset": 1633,
+      "length": 1,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
+      "kind": "StringLiteral",
+      "offset": 1660,
+      "length": 2,
+      "value": "\"\/?os=\""
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
+      "kind": "StringLiteral",
+      "offset": 1689,
+      "length": 1,
+      "value": "\"&sdk_ver=\""
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
+      "kind": "StringLiteral",
+      "offset": 1724,
+      "length": 1,
+      "value": "\"&app_ver=\""
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
+      "kind": "StringLiteral",
+      "offset": 1759,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
+      "kind": "StringLiteral",
+      "offset": 1838,
       "length": 55,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1514,
+      "offset": 1864,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1541,
-      "length": 1,
-      "value": "\"\/\""
-    },
-    {
-      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
-      "kind": "StringLiteral",
-      "offset": 1621,
-      "length": 55,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
-      "kind": "StringLiteral",
-      "offset": 1647,
-      "length": 1,
-      "value": "\"\/\""
-    },
-    {
-      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
-      "kind": "StringLiteral",
-      "offset": 1674,
+      "offset": 1891,
       "length": 1,
       "value": "\"\/\""
     },

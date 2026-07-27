@@ -1340,6 +1340,7 @@ extension Vmax.VmaxSections : Swift.CaseIterable {
   }
 }
 public protocol VmaxLayout : UIKit.UIView {
+  init()
   func getNibName() -> Swift.String
   func getParentContainer() -> UIKit.UIView?
   func setUpNib() throws
@@ -1629,7 +1630,7 @@ extension Vmax.VmaxAdSpace : Vmax.VmaxAdDelegate {
   public func onClose(vmaxAd: any Vmax.VmaxAd)
   public func onClicked(vmaxAd: any Vmax.VmaxAd)
 }
-public enum VmaxAdSpaceState {
+public enum VmaxAdSpaceState : Swift.String {
   case unknown
   case initialized
   case adRequested
@@ -1638,9 +1639,9 @@ public enum VmaxAdSpaceState {
   case adRender
   case adError
   case adRenderError
-  public static func == (a: Vmax.VmaxAdSpaceState, b: Vmax.VmaxAdSpaceState) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
     get
   }
 }
@@ -2106,6 +2107,7 @@ extension Vmax.ArtsEntertainment : Swift.Hashable {}
 extension Vmax.ArtsEntertainment : Swift.RawRepresentable {}
 extension Vmax.VmaxAdSpaceState : Swift.Equatable {}
 extension Vmax.VmaxAdSpaceState : Swift.Hashable {}
+extension Vmax.VmaxAdSpaceState : Swift.RawRepresentable {}
 extension Vmax.VmaxCacheMode : Swift.Equatable {}
 extension Vmax.VmaxCacheMode : Swift.Hashable {}
 extension Vmax.LawGovtPolitics : Swift.Equatable {}
