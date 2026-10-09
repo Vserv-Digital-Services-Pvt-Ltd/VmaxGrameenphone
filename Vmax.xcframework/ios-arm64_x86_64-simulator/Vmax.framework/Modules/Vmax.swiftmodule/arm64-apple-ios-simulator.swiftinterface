@@ -97,6 +97,10 @@ public protocol VmaxCarouselAdAsset : AnyObject {
 }
 public protocol VmaxCarouselAdCompletionListener : AnyObject {
   func onAdCompleted()
+  func onAdInteracted()
+}
+extension Vmax.VmaxCarouselAdCompletionListener {
+  public func onAdInteracted()
 }
 public enum VmaxCarouselSwipeMode {
   case adComplete
@@ -385,6 +389,9 @@ extension Vmax.HomeGarden : Swift.CaseIterable {
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class VmaxRegistry : ObjectiveC.NSObject {
+  public var adLayout: Vmax.VmaxAdLayout? {
+    get
+  }
   public static var shared: Vmax.VmaxRegistry
   public func addVmaxAds(vmaxAds: [any Vmax.VmaxAd.Type])
   public func addCustomSignatureForVmaxAd(signature: Swift.String, vmaxAd: any Vmax.VmaxAd.Type)
@@ -392,6 +399,7 @@ extension Vmax.HomeGarden : Swift.CaseIterable {
   public func registerPictureInPictureController(pictureInPictureController: Vmax.VmaxPictureInPictureController)
   public func unregisterPictureInPictureController()
   public func getViewabilityVersion() -> Swift.String?
+  public func setVmaxAdLayout(adLayout: Vmax.VmaxAdLayout)
   public func getVmaxAdLayout(adLayoutRegistrationType: Vmax.VmaxAdLayoutRegistrationType) -> Vmax.VmaxAdLayout
   public func getAllSignatures() -> [Swift.String]
   public func getVmaxAd(format: Swift.String) -> (any Vmax.VmaxAd)?
@@ -616,9 +624,13 @@ extension Vmax.AdClickBrowser : Swift.CaseIterable {
 public class VmaxAdLayout {
   public init(adLayoutRegistrationType: Vmax.VmaxAdLayoutRegistrationType)
   public func addAdLayout<T>(experience: T, adLayout: any Vmax.VmaxLayout)
+  public func getLayout(vmaxAd: any Vmax.VmaxAd, adResponseSignature: Swift.String) -> (any Vmax.VmaxLayout)?
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class VmaxManager {
+  public var initializationState: Vmax.VmaxManagerState {
+    get
+  }
   public var remoteAdsConfig: Vmax.VmaxRemoteAdsConfig?
   public var isAppMuted: Swift.Bool
   public static var shared: Vmax.VmaxManager
@@ -639,6 +651,18 @@ extension Vmax.VmaxManager {
   public func getAdvertisingId() -> Swift.String?
   public func getSourceConfigService() -> Vmax.VmaxSourceConfig
   public func getSourceConfiguration() -> [Swift.String : Any]?
+  public func release()
+}
+public enum VmaxManagerState : Swift.String {
+  case idle
+  case initializationInProgress
+  case initialized
+  case initializationFailed
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
 }
 public enum IllegalContent : Swift.Int {
   case illegaleContent
@@ -1714,6 +1738,7 @@ public protocol VmaxAd : ObjectiveC.NSObject {
   func set(adClickBrowser: Vmax.AdClickBrowser)
   func set(cacheMode: Vmax.VmaxCacheMode)
   func set(mediaLoadTimeout: Swift.Int)
+  func getVmaxLayout() -> (any Vmax.VmaxLayout)?
   func getVmaxAdInfo() -> Vmax.VmaxAdInfo?
   func pause()
   func resume()
@@ -1732,13 +1757,20 @@ extension Vmax.VmaxAd {
   public func set(cacheMode: Vmax.VmaxCacheMode)
   public func set(mediaLoadTimeout: Swift.Int)
   public func getVmaxAdInfo() -> Vmax.VmaxAdInfo?
+  public func getVmaxLayout() -> (any Vmax.VmaxLayout)?
   public func mute()
   public func unmute()
   public func handleAdClick()
   public func cacheMediaIfNotCached()
 }
 public protocol VmaxFlutterAd : Vmax.VmaxAd {
+  func setAdIsDisplayedInFlutter(flag: Swift.Bool)
   func getAdResponse() -> Swift.String?
+  func fireAdImpression()
+  func getAdIsDisplayedInFlutter() -> Swift.Bool
+}
+extension Vmax.VmaxFlutterAd {
+  public func getAdIsDisplayedInFlutter() -> Swift.Bool
 }
 final public class VmaxAdInfo {
   final public var signature: Swift.String?
@@ -1765,6 +1797,7 @@ final public class VmaxAdInfo {
   final public var companions: [Any]?
   final public var companionResourceUrls: [Swift.String]?
   final public var cacheMode: Vmax.VmaxCacheMode
+  final public var isAdInterstitial: Swift.Bool
   public init()
   @objc deinit
 }
@@ -2040,6 +2073,9 @@ extension Vmax.Business : Swift.RawRepresentable {}
 extension Vmax.AdClickBrowser : Swift.Equatable {}
 extension Vmax.AdClickBrowser : Swift.Hashable {}
 extension Vmax.AdClickBrowser : Swift.RawRepresentable {}
+extension Vmax.VmaxManagerState : Swift.Equatable {}
+extension Vmax.VmaxManagerState : Swift.Hashable {}
+extension Vmax.VmaxManagerState : Swift.RawRepresentable {}
 extension Vmax.IllegalContent : Swift.Equatable {}
 extension Vmax.IllegalContent : Swift.Hashable {}
 extension Vmax.IllegalContent : Swift.RawRepresentable {}

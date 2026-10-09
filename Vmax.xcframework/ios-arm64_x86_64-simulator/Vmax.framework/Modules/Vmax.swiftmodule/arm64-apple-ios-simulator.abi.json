@@ -2176,6 +2176,47 @@
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onAdInteracted",
+            "printedName": "onAdInteracted()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:4Vmax0A28CarouselAdCompletionListenerP02onC10InteractedyyF",
+            "mangledName": "$s4Vmax0A28CarouselAdCompletionListenerP02onC10InteractedyyF",
+            "moduleName": "Vmax",
+            "genericSig": "<τ_0_0 where τ_0_0 : Vmax.VmaxCarouselAdCompletionListener>",
+            "sugared_genericSig": "<Self where Self : Vmax.VmaxCarouselAdCompletionListener>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onAdInteracted",
+            "printedName": "onAdInteracted()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:4Vmax0A28CarouselAdCompletionListenerPAAE02onC10InteractedyyF",
+            "mangledName": "$s4Vmax0A28CarouselAdCompletionListenerPAAE02onC10InteractedyyF",
+            "moduleName": "Vmax",
+            "genericSig": "<τ_0_0 where τ_0_0 : Vmax.VmaxCarouselAdCompletionListener>",
+            "sugared_genericSig": "<Self where Self : Vmax.VmaxCarouselAdCompletionListener>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -10808,6 +10849,68 @@
         "children": [
           {
             "kind": "Var",
+            "name": "adLayout",
+            "printedName": "adLayout",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Vmax.VmaxAdLayout?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VmaxAdLayout",
+                    "printedName": "Vmax.VmaxAdLayout",
+                    "usr": "s:4Vmax0A8AdLayoutC"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:4Vmax0A8RegistryC8adLayoutAA0a2AdD0CSgvp",
+            "mangledName": "$s4Vmax0A8RegistryC8adLayoutAA0a2AdD0CSgvp",
+            "moduleName": "Vmax",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Vmax.VmaxAdLayout?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VmaxAdLayout",
+                        "printedName": "Vmax.VmaxAdLayout",
+                        "usr": "s:4Vmax0A8AdLayoutC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Vmax0A8RegistryC8adLayoutAA0a2AdD0CSgvg",
+                "mangledName": "$s4Vmax0A8RegistryC8adLayoutAA0a2AdD0CSgvg",
+                "moduleName": "Vmax",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "shared",
             "printedName": "shared",
             "children": [
@@ -11093,6 +11196,33 @@
             "declKind": "Func",
             "usr": "s:4Vmax0A8RegistryC21getViewabilityVersionSSSgyF",
             "mangledName": "$s4Vmax0A8RegistryC21getViewabilityVersionSSSgyF",
+            "moduleName": "Vmax",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setVmaxAdLayout",
+            "printedName": "setVmaxAdLayout(adLayout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAdLayout",
+                "printedName": "Vmax.VmaxAdLayout",
+                "usr": "s:4Vmax0A8AdLayoutC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:4Vmax0A8RegistryC03setA8AdLayout02adE0yAA0adE0C_tF",
+            "mangledName": "$s4Vmax0A8RegistryC03setA8AdLayout02adE0yAA0adE0C_tF",
             "moduleName": "Vmax",
             "declAttributes": [
               "AccessControl",
@@ -17567,6 +17697,48 @@
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getLayout",
+            "printedName": "getLayout(vmaxAd:adResponseSignature:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Vmax.VmaxLayout)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VmaxLayout",
+                    "printedName": "any Vmax.VmaxLayout",
+                    "usr": "s:4Vmax0A6LayoutP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxAd",
+                "printedName": "any Vmax.VmaxAd",
+                "usr": "s:4Vmax0A2AdP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:4Vmax0A8AdLayoutC03getC004vmaxB019adResponseSignatureAA0aC0_pSgAA0aB0_p_SStF",
+            "mangledName": "$s4Vmax0A8AdLayoutC03getC004vmaxB019adResponseSignatureAA0aC0_pSgAA0aB0_p_SStF",
+            "moduleName": "Vmax",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -17626,6 +17798,52 @@
         "name": "VmaxManager",
         "printedName": "VmaxManager",
         "children": [
+          {
+            "kind": "Var",
+            "name": "initializationState",
+            "printedName": "initializationState",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VmaxManagerState",
+                "printedName": "Vmax.VmaxManagerState",
+                "usr": "s:4Vmax0A12ManagerStateO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:4Vmax0A7ManagerC19initializationStateAA0abD0Ovp",
+            "mangledName": "$s4Vmax0A7ManagerC19initializationStateAA0abD0Ovp",
+            "moduleName": "Vmax",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VmaxManagerState",
+                    "printedName": "Vmax.VmaxManagerState",
+                    "usr": "s:4Vmax0A12ManagerStateO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Vmax0A7ManagerC19initializationStateAA0abD0Ovg",
+                "mangledName": "$s4Vmax0A7ManagerC19initializationStateAA0abD0Ovg",
+                "moduleName": "Vmax",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
           {
             "kind": "Var",
             "name": "remoteAdsConfig",
@@ -18381,6 +18599,28 @@
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "release",
+            "printedName": "release()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:4Vmax0A7ManagerC7releaseyyF",
+            "mangledName": "$s4Vmax0A7ManagerC7releaseyyF",
+            "moduleName": "Vmax",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -18406,6 +18646,293 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VmaxManagerState",
+        "printedName": "VmaxManagerState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "idle",
+            "printedName": "idle",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Vmax.VmaxManagerState.Type) -> Vmax.VmaxManagerState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VmaxManagerState",
+                    "printedName": "Vmax.VmaxManagerState",
+                    "usr": "s:4Vmax0A12ManagerStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Vmax.VmaxManagerState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VmaxManagerState",
+                        "printedName": "Vmax.VmaxManagerState",
+                        "usr": "s:4Vmax0A12ManagerStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:4Vmax0A12ManagerStateO4idleyA2CmF",
+            "mangledName": "$s4Vmax0A12ManagerStateO4idleyA2CmF",
+            "moduleName": "Vmax"
+          },
+          {
+            "kind": "Var",
+            "name": "initializationInProgress",
+            "printedName": "initializationInProgress",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Vmax.VmaxManagerState.Type) -> Vmax.VmaxManagerState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VmaxManagerState",
+                    "printedName": "Vmax.VmaxManagerState",
+                    "usr": "s:4Vmax0A12ManagerStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Vmax.VmaxManagerState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VmaxManagerState",
+                        "printedName": "Vmax.VmaxManagerState",
+                        "usr": "s:4Vmax0A12ManagerStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:4Vmax0A12ManagerStateO24initializationInProgressyA2CmF",
+            "mangledName": "$s4Vmax0A12ManagerStateO24initializationInProgressyA2CmF",
+            "moduleName": "Vmax"
+          },
+          {
+            "kind": "Var",
+            "name": "initialized",
+            "printedName": "initialized",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Vmax.VmaxManagerState.Type) -> Vmax.VmaxManagerState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VmaxManagerState",
+                    "printedName": "Vmax.VmaxManagerState",
+                    "usr": "s:4Vmax0A12ManagerStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Vmax.VmaxManagerState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VmaxManagerState",
+                        "printedName": "Vmax.VmaxManagerState",
+                        "usr": "s:4Vmax0A12ManagerStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:4Vmax0A12ManagerStateO11initializedyA2CmF",
+            "mangledName": "$s4Vmax0A12ManagerStateO11initializedyA2CmF",
+            "moduleName": "Vmax"
+          },
+          {
+            "kind": "Var",
+            "name": "initializationFailed",
+            "printedName": "initializationFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Vmax.VmaxManagerState.Type) -> Vmax.VmaxManagerState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VmaxManagerState",
+                    "printedName": "Vmax.VmaxManagerState",
+                    "usr": "s:4Vmax0A12ManagerStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Vmax.VmaxManagerState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VmaxManagerState",
+                        "printedName": "Vmax.VmaxManagerState",
+                        "usr": "s:4Vmax0A12ManagerStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:4Vmax0A12ManagerStateO20initializationFailedyA2CmF",
+            "mangledName": "$s4Vmax0A12ManagerStateO20initializationFailedyA2CmF",
+            "moduleName": "Vmax"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Vmax.VmaxManagerState?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VmaxManagerState",
+                    "printedName": "Vmax.VmaxManagerState",
+                    "usr": "s:4Vmax0A12ManagerStateO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:4Vmax0A12ManagerStateO8rawValueACSgSS_tcfc",
+            "mangledName": "$s4Vmax0A12ManagerStateO8rawValueACSgSS_tcfc",
+            "moduleName": "Vmax",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:4Vmax0A12ManagerStateO8rawValueSSvp",
+            "mangledName": "$s4Vmax0A12ManagerStateO8rawValueSSvp",
+            "moduleName": "Vmax",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Vmax0A12ManagerStateO8rawValueSSvg",
+                "mangledName": "$s4Vmax0A12ManagerStateO8rawValueSSvg",
+                "moduleName": "Vmax",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:4Vmax0A12ManagerStateO",
+        "mangledName": "$s4Vmax0A12ManagerStateO",
+        "moduleName": "Vmax",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
           }
         ]
       },
@@ -49247,6 +49774,39 @@
           },
           {
             "kind": "Function",
+            "name": "getVmaxLayout",
+            "printedName": "getVmaxLayout()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Vmax.VmaxLayout)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VmaxLayout",
+                    "printedName": "any Vmax.VmaxLayout",
+                    "usr": "s:4Vmax0A6LayoutP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:4Vmax0A2AdP03getA6LayoutAA0aD0_pSgyF",
+            "mangledName": "$s4Vmax0A2AdP03getA6LayoutAA0aD0_pSgyF",
+            "moduleName": "Vmax",
+            "genericSig": "<τ_0_0 where τ_0_0 : Vmax.VmaxAd>",
+            "sugared_genericSig": "<Self where Self : Vmax.VmaxAd>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getVmaxAdInfo",
             "printedName": "getVmaxAdInfo()",
             "children": [
@@ -49648,6 +50208,35 @@
           },
           {
             "kind": "Function",
+            "name": "getVmaxLayout",
+            "printedName": "getVmaxLayout()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Vmax.VmaxLayout)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VmaxLayout",
+                    "printedName": "any Vmax.VmaxLayout",
+                    "usr": "s:4Vmax0A6LayoutP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:4Vmax0A2AdPAAE03getA6LayoutAA0aD0_pSgyF",
+            "mangledName": "$s4Vmax0A2AdPAAE03getA6LayoutAA0aD0_pSgyF",
+            "moduleName": "Vmax",
+            "genericSig": "<τ_0_0 where τ_0_0 : Vmax.VmaxAd>",
+            "sugared_genericSig": "<Self where Self : Vmax.VmaxAd>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "mute",
             "printedName": "mute()",
             "children": [
@@ -49761,6 +50350,33 @@
         "children": [
           {
             "kind": "Function",
+            "name": "setAdIsDisplayedInFlutter",
+            "printedName": "setAdIsDisplayedInFlutter(flag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:4Vmax0A9FlutterAdP03setc13IsDisplayedInB04flagySb_tF",
+            "mangledName": "$s4Vmax0A9FlutterAdP03setc13IsDisplayedInB04flagySb_tF",
+            "moduleName": "Vmax",
+            "genericSig": "<τ_0_0 where τ_0_0 : Vmax.VmaxFlutterAd>",
+            "sugared_genericSig": "<Self where Self : Vmax.VmaxFlutterAd>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getAdResponse",
             "printedName": "getAdResponse()",
             "children": [
@@ -49787,6 +50403,70 @@
             "sugared_genericSig": "<Self where Self : Vmax.VmaxFlutterAd>",
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "fireAdImpression",
+            "printedName": "fireAdImpression()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:4Vmax0A9FlutterAdP04fireC10ImpressionyyF",
+            "mangledName": "$s4Vmax0A9FlutterAdP04fireC10ImpressionyyF",
+            "moduleName": "Vmax",
+            "genericSig": "<τ_0_0 where τ_0_0 : Vmax.VmaxFlutterAd>",
+            "sugared_genericSig": "<Self where Self : Vmax.VmaxFlutterAd>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAdIsDisplayedInFlutter",
+            "printedName": "getAdIsDisplayedInFlutter()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:4Vmax0A9FlutterAdP03getc13IsDisplayedInB0SbyF",
+            "mangledName": "$s4Vmax0A9FlutterAdP03getc13IsDisplayedInB0SbyF",
+            "moduleName": "Vmax",
+            "genericSig": "<τ_0_0 where τ_0_0 : Vmax.VmaxFlutterAd>",
+            "sugared_genericSig": "<Self where Self : Vmax.VmaxFlutterAd>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getAdIsDisplayedInFlutter",
+            "printedName": "getAdIsDisplayedInFlutter()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:4Vmax0A9FlutterAdPAAE03getc13IsDisplayedInB0SbyF",
+            "mangledName": "$s4Vmax0A9FlutterAdPAAE03getc13IsDisplayedInB0SbyF",
+            "moduleName": "Vmax",
+            "genericSig": "<τ_0_0 where τ_0_0 : Vmax.VmaxFlutterAd>",
+            "sugared_genericSig": "<Self where Self : Vmax.VmaxFlutterAd>",
+            "isFromExtension": true,
             "funcSelfKind": "NonMutating"
           }
         ],
@@ -52721,6 +53401,102 @@
                 "declKind": "Accessor",
                 "usr": "s:4Vmax0A6AdInfoC9cacheModeAA0a5CacheE0OvM",
                 "mangledName": "$s4Vmax0A6AdInfoC9cacheModeAA0a5CacheE0OvM",
+                "moduleName": "Vmax",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isAdInterstitial",
+            "printedName": "isAdInterstitial",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:4Vmax0A6AdInfoC02isB12InterstitialSbvp",
+            "mangledName": "$s4Vmax0A6AdInfoC02isB12InterstitialSbvp",
+            "moduleName": "Vmax",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Vmax0A6AdInfoC02isB12InterstitialSbvg",
+                "mangledName": "$s4Vmax0A6AdInfoC02isB12InterstitialSbvg",
+                "moduleName": "Vmax",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Vmax0A6AdInfoC02isB12InterstitialSbvs",
+                "mangledName": "$s4Vmax0A6AdInfoC02isB12InterstitialSbvs",
+                "moduleName": "Vmax",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:4Vmax0A6AdInfoC02isB12InterstitialSbvM",
+                "mangledName": "$s4Vmax0A6AdInfoC02isB12InterstitialSbvM",
                 "moduleName": "Vmax",
                 "implicit": true,
                 "declAttributes": [
@@ -64377,6 +65153,20 @@
       "value": "\"geoDetectionService\""
     },
     {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/GeoDetectionService\/VmaxGeoDetectionManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 590,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/GeoDetectionService\/VmaxGeoDetectionManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5743,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxAdRefreshHandler\/VmaxAdRefreshHandler.swift",
       "kind": "IntegerLiteral",
       "offset": 170,
@@ -65135,7 +65925,7 @@
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/Core\/VmaxRegistry.swift",
       "kind": "BooleanLiteral",
-      "offset": 7817,
+      "offset": 8053,
       "length": 5,
       "value": "false"
     },
@@ -65827,22 +66617,29 @@
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/Core\/VmaxManager.swift",
+      "kind": "StringLiteral",
+      "offset": 590,
+      "length": 13,
+      "value": "\"A-IO-4.0.46\""
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/Core\/VmaxManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 451,
+      "offset": 1093,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/Core\/VmaxManager.swift",
-      "kind": "StringLiteral",
-      "offset": 483,
-      "length": 13,
-      "value": "\"A-IO-4.0.43\""
+      "kind": "BooleanLiteral",
+      "offset": 1185,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/Core\/VmaxManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1295,
+      "offset": 1478,
       "length": 5,
       "value": "false"
     },
@@ -66535,7 +67332,7 @@
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxSourceConfigService\/VmaxSourceConfigService.swift",
       "kind": "BooleanLiteral",
-      "offset": 932,
+      "offset": 975,
       "length": 4,
       "value": "true"
     },
@@ -66640,28 +67437,28 @@
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/Core\/VmaxUser.swift",
       "kind": "IntegerLiteral",
-      "offset": 3571,
+      "offset": 3911,
       "length": 4,
       "value": "1870"
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/Core\/VmaxUser.swift",
       "kind": "StringLiteral",
-      "offset": 3603,
+      "offset": 3943,
       "length": 41,
       "value": "\"yearOfBirth has to be greater than 1870\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/Core\/VmaxUser.swift",
       "kind": "StringLiteral",
-      "offset": 3833,
+      "offset": 4173,
       "length": 48,
       "value": "\"yearOfBirth has to be less than \""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/Core\/VmaxUser.swift",
       "kind": "StringLiteral",
-      "offset": 3880,
+      "offset": 4220,
       "length": 10,
       "value": "\"\""
     },
@@ -66909,6 +67706,20 @@
       "offset": 556,
       "length": 20,
       "value": "\"userProfileService\""
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/UserProfileService\/VmaxUserProfileManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 613,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/UserProfileService\/VmaxUserProfileManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 11263,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/VMaxRequestBuilder\/VmaxAdsInsertionRequestBuilder.swift",
@@ -67781,7 +68592,7 @@
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/Core\/VmaxAdSpace.swift",
       "kind": "BooleanLiteral",
-      "offset": 30925,
+      "offset": 31068,
       "length": 4,
       "value": "true"
     },
@@ -67826,6 +68637,13 @@
       "offset": 467,
       "length": 8,
       "value": "\"IAB11-\""
+    },
+    {
+      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/Protocols\/VmaxAd.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3895,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Public\/Models&Enums\/VmaxPages\/VmaxPagesHealthFitness.swift",
@@ -68817,273 +69635,231 @@
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 151,
+      "offset": 150,
       "length": 21,
       "value": "\"uat-assets.vmax.com\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 193,
-      "length": 16,
-      "value": "\"media.vmax.com\""
+      "offset": 198,
+      "length": 41,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 229,
-      "length": 22,
-      "value": "\"vmax-ads.fancode.com\""
+      "offset": 225,
+      "length": 1,
+      "value": "\"-scs.vmax.com\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 270,
-      "length": 18,
-      "value": "\"video.runn.media\""
-    },
-    {
-      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
-      "kind": "StringLiteral",
-      "offset": 311,
-      "length": 22,
-      "value": "\"media.allegroads.com\""
-    },
-    {
-      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
-      "kind": "StringLiteral",
-      "offset": 355,
+      "offset": 267,
       "length": 28,
       "value": "\"assets.talia.telkomsel.com\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 408,
-      "length": 18,
-      "value": "\"assets.gpad.tech\""
-    },
-    {
-      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
-      "kind": "StringLiteral",
-      "offset": 447,
-      "length": 25,
-      "value": "\"mediamax.shemaroome.com\""
-    },
-    {
-      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
-      "kind": "StringLiteral",
-      "offset": 488,
-      "length": 21,
-      "value": "\"ads.bajajfinserv.in\""
-    },
-    {
-      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
-      "kind": "StringLiteral",
-      "offset": 530,
-      "length": 27,
-      "value": "\"monetize-cdn.gozayaan.com\""
-    },
-    {
-      "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
-      "kind": "StringLiteral",
-      "offset": 629,
+      "offset": 367,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 659,
+      "offset": 397,
       "length": 10,
       "value": "\"{domain}\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 698,
+      "offset": 436,
       "length": 14,
       "value": "\"{accountKey}\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 736,
+      "offset": 474,
       "length": 9,
       "value": "\"{appId}\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 769,
+      "offset": 507,
       "length": 9,
       "value": "\"{keyId}\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 805,
+      "offset": 543,
       "length": 6,
       "value": "\"{os}\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 840,
+      "offset": 578,
       "length": 14,
       "value": "\"{sdkVersion}\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 883,
+      "offset": 621,
       "length": 14,
       "value": "\"{appVersion}\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1039,
+      "offset": 764,
       "length": 7,
       "value": "\"1.0.0\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1072,
+      "offset": 797,
       "length": 147,
       "value": "\"https:\/\/\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1106,
+      "offset": 831,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1133,
+      "offset": 858,
       "length": 1,
       "value": "\"\/source-config\/\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1174,
+      "offset": 899,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1196,
+      "offset": 921,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1218,
+      "offset": 943,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1307,
+      "offset": 1032,
       "length": 24,
       "value": "\"{source-config-domain}\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1361,
+      "offset": 1086,
       "length": 25,
       "value": "\"{source-config-version}\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1458,
+      "offset": 1183,
       "length": 73,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1484,
+      "offset": 1209,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1511,
+      "offset": 1236,
       "length": 1,
       "value": "\"\/adspot\/1.0.2\/query\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1607,
+      "offset": 1332,
       "length": 153,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1633,
+      "offset": 1358,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1660,
+      "offset": 1385,
       "length": 2,
       "value": "\"\/?os=\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1689,
+      "offset": 1414,
       "length": 1,
       "value": "\"&sdk_ver=\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1724,
+      "offset": 1449,
       "length": 1,
       "value": "\"&app_ver=\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1759,
+      "offset": 1484,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1838,
+      "offset": 1563,
       "length": 55,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1864,
+      "offset": 1589,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/admin_vserv\/VservWorkspace\/Vserv_Git\/vmaxng-sdk-ios\/Vmax\/Vmax\/Private\/VmaxConstant\/VmaxConstant.swift",
       "kind": "StringLiteral",
-      "offset": 1891,
+      "offset": 1616,
       "length": 1,
       "value": "\"\/\""
     },
